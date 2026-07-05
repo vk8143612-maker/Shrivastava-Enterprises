@@ -64,7 +64,7 @@ export default function Hero() {
             {stats.map(s => (
               <div key={s.label}>
                 <dd className="font-display text-3xl font-semibold text-white md:text-4xl">
-                  <Counter value={s.value} suffix={s.suffix} prefix={s.prefix} />
+                  <Counter value={s.value} suffix={s.suffix} />
                 </dd>
                 <dt className="mt-1 text-xs leading-snug text-steel">{s.label}</dt>
               </div>
