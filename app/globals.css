@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: #08080a;
+  color: #e7e7ea;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(201, 162, 75, 0.28);
+  color: #fff;
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0d0d10; }
+::-webkit-scrollbar-thumb {
+  background: #26262d;
+  border-radius: 999px;
+  border: 2px solid #0d0d10;
+}
+::-webkit-scrollbar-thumb:hover { background: #3a3a44; }
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-6 md:px-10; }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-medium uppercase
+           tracking-widest2 text-gold;
+  }
+
+  .heading-xl {
+    @apply font-display font-semibold tracking-tightest text-white
+           text-4xl leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl;
+  }
+  .heading-lg {
+    @apply font-display font-semibold tracking-tightest text-white
+           text-3xl leading-[1.08] sm:text-4xl md:text-5xl;
+  }
+
+  .btn {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-full
+           px-7 py-3.5 text-sm font-medium transition-all duration-300
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/60;
+  }
+  .btn-gold {
+    @apply btn bg-gold text-ink hover:bg-gold-soft hover:shadow-gold;
+  }
+  .btn-ghost {
+    @apply btn border border-line text-white/90 hover:border-gold/60
+           hover:text-white hover:bg-white/[0.03];
+  }
+
+  .card {
+    @apply relative overflow-hidden rounded-2xl border border-line
+           bg-panel/60 shadow-inset backdrop-blur-sm;
+  }
+
+  .gold-line {
+    background: linear-gradient(90deg, transparent, rgba(201,162,75,0.7), transparent);
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .glass {
+    background: rgba(20, 20, 24, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
