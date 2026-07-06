@@ -3,7 +3,7 @@ export const site = {
   tagline: 'Trusted Scrap Trading & Industrial Metal Solutions',
   shortDesc:
     'A trusted partner for industrial scrap trading and metal solutions — buying, bulk supply and factory clearance handled with professionalism and reliability.',
-  url: 'https://chitragupta-enterprises.vercel.app',
+  url: 'https://chitraguptaenterprises.online',
   phoneDisplay: '+91 80822 02653',
   phone: '+918082202653',
   whatsapp: '918082202653',
